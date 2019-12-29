@@ -7,17 +7,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <title>Strava Dashboard Clone</title>
+    <style>
+        .dropdown:hover .dropdown-menu {
+            display: block; 
+        }
+
+        .dropdown:hover #dashboarddropdownmenulink {
+            color:orangered;
+        }
+        .dropdown:hover #trainingdropdownmenulink {
+            color:orangered;
+        }
+        .dropdown:hover #exploredropdownmenulink {
+            color:orangered;
+        }
+       
+        .navbar-toggler-icon{
+            color:orangered;
+        }
+        #dashboarddropdownmenulink{
+            border-bottom:orangered 2px solid;
+        }
+        #upgradebtn{
+            background-color: rgb(238, 103, 54);
+            color: white;
+            font-size: 10px;
+            padding:5px 12px;
+        }
+        .dropbtn{
+            border-radius: 0%;
+        }
+        #othernav {
+            padding-left: 20px;
+            padding-right: 80px;
+
+        }
+        .nav ul{
+            list-style: none;
+            text-align: center;
+        }
+        .nav ul li{
+            display: inline-block;
+        }
+      
+    </style>
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-sm navbar-light bg-light">
+    <nav class="navbar navbar-expand-sm navbar-light bg-light fixed-top">
         <a class="navbar-brand" href="#"><img class="search-icon" src="images/stravaicon.png" alt="Strava Icon"></a>
         <button role="search" class="btn"><span><img class="icon" src="images/searchicon.png" alt="search icon"></span></button>
 
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <div class="navbar" id="navbarNavDropdown">
             <ul class="navbar-nav">
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle"  href="#" id="toggleicondropdownmenulink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="navbar-toggler-icon"></span></a> 
+                    <a class="nav-link dropbtn dropdown-toggle"  href="#" id="toggleicondropdownmenulink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="navbar-toggler-icon"></span></a> 
                     <div class="dropdown-menu" aria-labelledby="toggleicondropdownmenulink">
                         <a class="dropdown-item" href="#">New App in Progress</a>
                         <a class="dropdown-item" href="#">Activities</a>
@@ -28,45 +72,81 @@
                         <a class="dropdown-item" href="#">Global Heatmap</a>
                     </div>
                 </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" role="button" id="dashboarddropdownmenulink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">Dashboard</a>
+                <li class="nav-item dropdown ">
+                    <button class="nav-link dropdown-toggle dropbtn btn" role="button" id="dashboarddropdownmenulink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dashboard</button>
                     <div class="dropdown-menu" aria-labelledby="dashboarddropdownmenulink">
                         <a class="dropdown-item" href="#">Activity Feed</a>
                         <a class="dropdown-item" href="#">My Segments</a>
                         <a class="dropdown-item" href="#">My Routes</a>
-                        <a class="dropdown-item" href="#">Strava Summit</a>
+                        <a class="dropdown-item" href="#">STRAVA SUMMIT</a>
                         <a class="dropdown-item" href="#">My Goals</a>
                         <a class="dropdown-item" href="#">Heatmaps</a>
                     </div>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" role="button" id="tainingdropdownmenulink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">Training</a>
+                    <button class="nav-link dropdown-toggle dropbtn btn" role="button" id="trainingdropdownmenulink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Training</button>
                     <div class="dropdown-menu" aria-labelledby="tainingdropdownmenulink">
-                        <a class="dropdown-item" href="#">Abc</a>
-                        <a class="dropdown-item" href="#">Abc</a>
-                        <a class="dropdown-item" href="#">Abc</a>
-                        <a class="dropdown-item" href="#">Abc</a>
-                        <a class="dropdown-item" href="#">Abc</a>
-                        <a class="dropdown-item" href="#">Abc</a>
-                        <a class="dropdown-item" href="#">Abc</a>
+                        <a class="dropdown-item" href="#">Training Log</a>
+                        <a class="dropdown-item" href="#">Training Calendar</a>
+                        <a class="dropdown-item" href="#">My Activities</a>
+                        <a class="dropdown-item" href="#">STRAVA SUMMIT</a>
+                        <a class="dropdown-item" href="#">Training Plans</a>
+                        <a class="dropdown-item" href="#">Power Curve</a>
+                        <a class="dropdown-item" href="#">Fitness & Freshness</a>
                     </div>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" role="button" id="exploredropdownmenulink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">Explore</a>
+                    <button class="nav-link btn dropbtn dropdown-toggle btn" role="button" id="exploredropdownmenulink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Explore</button>
                     <div class="dropdown-menu" aria-labelledby="tainingdropdownmenulink">
-                        <a class="dropdown-item" href="#">Abc</a>
-                        <a class="dropdown-item" href="#">Abc</a>
-                        <a class="dropdown-item" href="#">Abc</a>
-                        <a class="dropdown-item" href="#">Abc</a>
-                        <a class="dropdown-item" href="#">Abc</a>
-                        <a class="dropdown-item" href="#">Abc</a>
-                        <a class="dropdown-item" href="#">Abc</a>
+                        <a class="dropdown-item" href="#">Segment Explore</a>
+                        <a class="dropdown-item" href="#">Segment Search</a>
+                        <a class="dropdown-item" href="#">Athlete Search</a>
+                        <a class="dropdown-item" href="#">Clubs</a>
+                        <a class="dropdown-item" href="#">Apps</a>
+                        <a class="dropdown-item" href="#">Running Races</a>
+                        <a class="dropdown-item" href="#">Local</a>
+                        <a class="dropdown-item" href="#">STRAVA SUMMIT</a>
+                        <a class="dropdown-item" href="#">Summit Perks</a>
                     </div>
 
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Challenges</a>
+                    <a class="nav-link" href="#" id="challenges">Challenges</a>
                 </li>
+            </ul>
+        </div>
+        <div class="nav" id="othernav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <button class="btn" role="button" id="upgradebtn"  type="submit">Upgrade</button>
+                </li>
+               
+                <li class="nav-item">
+                    <a href="#"><img src="images/notificationicon.png" alt="notification"></a>
+                </li>
+                <li class="nav-item dropdown">
+                    <button class="btn dropdown-toggle" role="dropdown" data-toggle="dropdown" aria-expanded="false" aria-haspopup="true">
+                        <img class="rounded-circle" src="images/profilepicsm.jpg" alt="Profile Pic">
+                    </button>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item">Find Friends</a>
+                        <a class="dropdown-item">My Profile</a>
+                        <a class="dropdown-item">Settings</a>
+                        <a class="dropdown-item">Log Out</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <button class="btn dropdown-btn" role="dropdown" data-toggle="dropdown" aria-expanded="false" aria-haspopup="true">
+                        <img src="images/addicon.png" alt="Upload">
+                    </button>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item">Upload activity</a>
+                        <a class="dropdown-item">Add manual activity</a>
+                        <a class="dropdown-item">Create a route</a>
+                        <a class="dropdown-item">Create a post</a>
+                    </div>
+                </li>
+
             </ul>
         </div>
 
